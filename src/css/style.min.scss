@@ -5,7 +5,9 @@
 
 body {
     min-height: 100vh;
-    background: url('../img/bg-main.jpg') center (center/cover) no-repeat;
-    background-color: #000000;
+    background: url('../img/bg-main.jpg') center (center/contain) no-repeat;
 }
 
+.rtyh {
+    color: white;
+}

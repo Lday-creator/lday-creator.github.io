@@ -15,13 +15,14 @@ gulp.task('server', function() {
 
 gulp.task('styles', function() {
     return gulp.src("src/sass/style.scss")
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        // .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(rename({
             prefix: "",
             suffix: ".min",
           }))
-        .pipe(autoprefixer())
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        // .pipe(autoprefixer())
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
 })
